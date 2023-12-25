@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/47a36223eb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id = "header">
+        <div class="container">
+            <nav>
+                <img src="Images/Harsh Villanueva.png" class = "logo">
+                <ul id = "sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#">Services</a></li> -->
+                    <li><a href="HARSH's Resume-hackerresume (4).pdf" target="_blank">Resume</a></li>
+                    <li><a href="#contact">Contacts</a></li>    
+                    <i class = "fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class ="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <div class="">
+                    <h1>Hi, I'm <span >Harsh Sharma</span> <br> From India</h1>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------about--------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/about1.jpg">
+                </div>
+                <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <br>
+                <p>Currently immersed in the enriching environment of IIMT College of Engineering, 
+                    is fervently pursuing a Bachelor of Technology (B.Tech) degree. Guided by an unwavering passion 
+                    for technology, my ambition is to establish himself as a Software Developer.
+                     In this academic journey, he delves into the complexities of software engineering principles
+                      and hones proficiency in various programming languages. Through dedication to academic
+                       pursuits and staying attuned to industry advancements, Harsh Sharma is on a determined path 
+                       to carve out a significant role in the dynamic realm of software development.</p>
+                       <br>
+                       <div class="tab-titles">
+                        <p class ="tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                        <p class ="tab-links" onclick = "opentab('experiences')">Experiences</p>
+                        <p class ="tab-links" onclick = "opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <!-- ---------skills---------- -->
+                            <li><span>Web Developer</span><br>Designing Web/App Interface</li>
+                            <br>
+                            <li><span>Data Structure and Algorithm</span><br>Solved 400+ Questions on Leetcode and GeeksForGeeks</li>
+                            <br>
+                            <li><span>Programming Languages</span><br> - Java <br>- Python <br> - C <br> - Javascript</li>
+                            <br>
+                            <li><span>Object Oriented Programming</span><br>Explored the concepts of oops in Java</li>
+                        </ul>
+                       </div>
+
+                       <div class="tab-contents " id ="experiences">
+                        <ul>
+                            <!-- -------------------Experiences------------------ -->
+                            <li><span>GAOTek | Technical Support Intern | Sept 2023 - Dec 2023</span> <br><br>--Strategic and detail-oriented Product Research Analyst adept at conducting comprehensive analysis on
+                                various products. <br> <br>
+                                -- Proficient in gathering and evaluating market data, competitor intelligence, and consumer trends to
+                                deliver insightful reports. <br> <br>
+                                --Effective communicator with a proven ability to distill complex information into clear and actionable
+                                insights.</li>
+                            
+                        </ul>
+                       </div>
+
+                       <div class="tab-contents" id ="education">
+                        <ul>
+                            <!-- -----------------------Education-------------------- -->
+                            <li><span>2018-2019</span><br>I have completed my High School with 88%</li> <br>
+                            <li><span>2020-2021</span><br>I have completed my Intermediate(PCM) with 77%</li>
+                          <br>
+                            <li><span>2021-2025</span><br>Currently pursuing Bachelor of Technology in Artificial Intelligence and Data Science </li>
+                           
+                        </ul>
+                       </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------Contacts--------------------------------- -->
+    <div id="contact">
+        <div class="containter">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class = "sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>harshsharma.iv@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7895231178</p>
+                    <div class="social-icons">
+                        <a href="instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/harsh-sharma-549796236/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="snapchat"><i class="fa-brands fa-snapchat"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name = "Name" placeholder="your Name" required>
+                        <input type="text" name = "email" placeholder="your email" required>
+                        <textarea name="Message"rows="6"placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="thanks">
+            <p>Thanks for visiting my Portfolio Website </p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
